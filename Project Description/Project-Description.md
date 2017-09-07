@@ -6,10 +6,10 @@ Inventory Mangement Application
 Team Members
 </h3>
 
-Kevin Bockenstette | bockenkc@mail.uc.edu
-Adam Karrasch      | karrasar@mail.uc.edu
-Matt Thomas        | thoma3mw@mail.uc.edu
-Ryan Pavsek        | pavsekrt@mail.uc.edu
+* Kevin Bockenstette | bockenkc@mail.uc.edu
+* Adam Karrasch      | karrasar@mail.uc.edu
+* Matt Thomas        | thoma3mw@mail.uc.edu
+* Ryan Pavsek        | pavsekrt@mail.uc.edu
 
 <h3>
 Advisor
