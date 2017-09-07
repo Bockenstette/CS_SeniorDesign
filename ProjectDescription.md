@@ -50,9 +50,9 @@ helpful.
 Approach
 </h3>
 Our initial approach is 3-fold.
-# Create a reliable input system for inputing entries into the database
-# Create a database, either local or cloud based, to handle the indexing/searching of the application
-# Refine the UX to a point where the application is easy and enjoyable to use
+* Create a reliable input system for inputing entries into the database
+* Create a database, either local or cloud based, to handle the indexing/searching of the application
+* Refine the UX to a point where the application is easy and enjoyable to use
 
 OPTIONAL FEATURE
 * Implement image recognition to allow application to recognize what object is photographed without
