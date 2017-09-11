@@ -15,7 +15,7 @@ Team Members
 Advisor
 </h3>
 
-* Proffesor Yizong Cheng | yizong.cheng@uc.edu
+* Professor Yizong Cheng | yizong.cheng@uc.edu
 
 <h3>
 Project Background Description
