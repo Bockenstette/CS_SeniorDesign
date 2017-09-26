@@ -7,9 +7,8 @@ There are two courses that taught me the most: CS 4092 - Database Design and Dev
 In Database Design, we learned about database structures and how to query data.  Both of these have been useful already while on
 co-op, but will also be a huge part of this project.  Software Engineering taught me about software development life cycles,
 requirement analysis, and other knowledge of software development.  We worked in teams for the lab assignments in Software Engineering,
-so I gained experience working with others, while also accounting for deadlines.  These are not the only two classes that I learned
-important knowledge in, but they stick out because of how much I learned while taking them.  The database knowledge and teamwork
-experience will be great assets while working on this project.
+so I gained experience working with others, while also accounting for deadlines.  The database knowledge and teamwork experience will
+be great assets while working on this project.  These are not the only two classes that I learned important knowledge in, but they stick out because of how much I learned while taking them.
 
 My first two co-op terms I worked as a Software Development Co-op at International TechneGroup Inc.  While working there, I learned
 Python and improved my self-confidence in the workplace.  I also worked on my public speaking as I had to give status updates on my
