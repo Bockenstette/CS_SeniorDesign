@@ -5,7 +5,7 @@
 * I want: to input a list of my belongings
 * So that: The App knows what to store
 
-### Story 2: Edit entered data
+### Story 2: Edit Entered Data
 * As a: User
 * I want: to be able to edit already entered objects
 * So that: I can keep the database up to date
