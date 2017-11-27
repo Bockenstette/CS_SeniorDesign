@@ -1,4 +1,4 @@
-# KRAM README
+# KRAM
 
 ## Table of Contents
 * [Abstract](#abstract)
@@ -13,7 +13,8 @@
 * [Appendix](#appendix)
 
 
-## Abstract 
+## Abstract
+KRAM is the ability to store everything you own. Our vision is for you to be able to “cram” all of your possessions into our app for easy ordering and searching. Not only that, the record of your possessions our app will produce can provide insurance assistance. We want to allow people to grab control of their lives through control of their possessions, and KRAM sets out to do just that.
 ## Description
 ## User Stories and Design Diagrams
 * User Stories
@@ -28,7 +29,7 @@
 ## Self Assessments
 ## Professional Biographies
 ## Budget
-* Satement that there have not been any.
+We have not spent any money and do not plan to at this time.
 ## Appendix
 * Include appropriate references, citations, links to code repositories, and meeting notes.
 * There should be evidence justifying 45 hours of effort for each team member.
