@@ -19,16 +19,26 @@ KRAM is the ability to store everything you own. Our vision is for you to be abl
 Our project is to create an inventory management application for people to use to keep track of their belongings. A user will be able to take a picture of something they own and enter it into a database along with appropriate metadata for indexing. Searches could then be done on the database to quickly find any possesions for reference. This application could also be used to help with recovering assets lost in a disaster such as a fire or tornado.
 ## User Stories and Design Diagrams
 * User Stories
+  * https://github.com/Bockenstette/CS_SeniorDesign/blob/master/User%20Stories/User_Stories.md
 * Design Diagrams: Level 0, Level 1 and Level 2 
+  * https://github.com/Bockenstette/CS_SeniorDesign/tree/master/Diagrams
 * Description of the Diagrams: including conventions and a brief description of the purpose of each component.
+  * https://github.com/Bockenstette/CS_SeniorDesign/blob/master/Diagrams/Notes.md
 ## Tasks and Timeline
 * Task List
+  * https://github.com/Bockenstette/CS_SeniorDesign/blob/master/Tasks%2C%20Milestones%2C%20Timeline%2C%20Effort%20Matrix/TaskList.md
 * Timeline
+  * https://github.com/Bockenstette/CS_SeniorDesign/blob/master/Tasks%2C%20Milestones%2C%20Timeline%2C%20Effort%20Matrix/Timeline_EffortMatrix.xlsx
 * Effort Matrix
+  * https://github.com/Bockenstette/CS_SeniorDesign/blob/master/Tasks%2C%20Milestones%2C%20Timeline%2C%20Effort%20Matrix/Timeline_EffortMatrix.xlsx
 ## ABET Concerns Essay
+https://github.com/Bockenstette/CS_SeniorDesign/blob/master/ABET%20Essay/ABET_Essay.md
 ## Slideshow
+https://github.com/Bockenstette/CS_SeniorDesign/blob/master/Fall%20Presentation/Oral%20Presentation.pdf
 ## Self Assessments
+https://github.com/Bockenstette/CS_SeniorDesign/tree/master/Initial%20Assesments
 ## Professional Biographies
+https://github.com/Bockenstette/CS_SeniorDesign/tree/master/Project%20Description
 ## Budget
 We have not spent any money and do not plan to at this time.
 ## Appendix
