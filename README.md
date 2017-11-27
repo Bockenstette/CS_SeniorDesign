@@ -16,6 +16,7 @@
 ## Abstract
 KRAM is the ability to store everything you own. Our vision is for you to be able to “cram” all of your possessions into our app for easy ordering and searching. Not only that, the record of your possessions our app will produce can provide insurance assistance. We want to allow people to grab control of their lives through control of their possessions, and KRAM sets out to do just that.
 ## Description
+Our project is to create an inventory management application for people to use to keep track of their belongings. A user will be able to take a picture of something they own and enter it into a database along with appropriate metadata for indexing. Searches could then be done on the database to quickly find any possesions for reference. This application could also be used to help with recovering assets lost in a disaster such as a fire or tornado.
 ## User Stories and Design Diagrams
 * User Stories
 * Design Diagrams: Level 0, Level 1 and Level 2 
