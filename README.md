@@ -44,6 +44,7 @@ We have not spent any money and do not plan to at this time.
 ## Appendix
 * Frontend Application: Angular 2 and Ionic
 * Backend: Java and MySQL
+* Anroid/iPhone Application, Possible Desktop Port
 
 ### Team Hours
 
