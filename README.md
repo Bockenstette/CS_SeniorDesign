@@ -42,8 +42,14 @@ https://github.com/Bockenstette/CS_SeniorDesign/tree/master/Project%20Descriptio
 ## Budget
 We have not spent any money and do not plan to at this time.
 ## Appendix
-* Include appropriate references, citations, links to code repositories, and meeting notes.
-* There should be evidence justifying 45 hours of effort for each team member.
+* Frontend Application: Angular 2 and Ionic
+* Backend: Java and MySQL
 
+### Team Hours
 
-
+Team Member |Total Hours |	Class Time	|Advisor Meetings	|Group/Pair Discussions|	ASN1	|ASN2	|ASN3	|ASN4	|ASN5	|ASN6	|ASN7	|ASN8	|ASN9	|Other
+---|---|---|---|---|---|---|---|---|---|---|---|---|---|---
+Kevin	|45	|10	|1.5	|10		|1.5		|1.75		|2	|2.5	|2	|1.25	|1.75	|2		|2.5		|6.25
+Adam	|45	|10	|2		|12.5	|1.5		|2			|2	|2.5	|2	|1.75	|1.75	|3		|3		|1
+Ryan	|45	|10	|1		|10		|1.5		|1.5		|2	|2.5	|2	|1		|1.75	|2		|2.5		|7.25
+Matt	|45	|10	|0.5	|10		|1.5		|1.5		|3	|2.5	|3	|2.75	|2.25	|2.5	|	2.5		|3
