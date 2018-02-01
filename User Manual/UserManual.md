@@ -100,9 +100,19 @@ Click the Hamburger Menu icon ( ☰ ) and then select 'Logout' at the bottom of 
 
 ## Searching for an Item
 
+![Main Screen](images/UI_MainScreen.png)
+
 Click the Magnifying Glass icon ( 🔍 ) in the top right hand corner of the Main Screen.  The action bar will then become a search box in which to type what you want to search for.
 
 
 ## Sorting Items
 
+![Main Screen](images/UI_MainScreen.png)
+
 Click the More Options icon ( ⋮ ) in the top right hand corner of the Main Screen.  Then, click 'Sort by...' and select which option to sort by.
+
+
+<br/>
+<br/>
+
+*As of 02/01/2018.  The user interface is subject to change and the manual will be updated accordingly.*
