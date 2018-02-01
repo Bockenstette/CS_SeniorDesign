@@ -23,11 +23,11 @@ On the Login Screen, type your Username and Pin into the corresponding text boxe
 
 ![Main Screen](images/UI_MainScreen.png)
 
-Clicking the Hamburger Menu icon will open the Side Menu.
-Clicking the More Options icon will open Additional Options.
-Clicking the Magnifying Glass will open the Search Bar.
-Clicking the Add icon will open the Create Item Screen.
-Clicking an item will open the Item Details Screen.
+* Clicking the Hamburger Menu icon ( ☰ ) will open the Side Menu.
+* Clicking the More Options icon ( ⋮ ) will open Additional Options.
+* Clicking the Magnifying Glass icon ( 🔍 ) will open the Search Bar.
+* Clicking the Add icon will open the Create Item Screen.
+* Clicking an item will open the Item Details Screen.
 
 
 # The Basics
@@ -76,15 +76,15 @@ Click 'Delete' in the top right hand corner of the Item Edit Screen.
 
 ![Hamburger Menu](images/UI_HamburgerMenu.png)
 
-Click the Hamburger Menu icon and then select 'Logout' at the bottom of the menu.
+Click the Hamburger Menu icon ( ☰ ) and then select 'Logout' at the bottom of the menu.
 
 
 # Advanced Operations
 ### Searching for an Item
 
-Click the Magnifying Glass icon in the top right hand corner of the Main Screen.  The action bar will then become a search box in which to type what you want to search for.
+Click the Magnifying Glass icon ( 🔍 ) in the top right hand corner of the Main Screen.  The action bar will then become a search box in which to type what you want to search for.
 
 
 ### Sorting Items
 
-Click the More Options icon in the top right hand corner of the Main Screen.  Then, click 'Sort by...' and select which option to sort by.
+Click the More Options icon ( ⋮ ) in the top right hand corner of the Main Screen.  Then, click 'Sort by...' and select which option to sort by.
