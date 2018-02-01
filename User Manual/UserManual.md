@@ -1,4 +1,20 @@
+## Table of Contents
+* [Getting Started](#getting-started)
+  * [Create an Account](#create-an-account)
+  * [Logging In](#logging-in)
+  * [Main Screen](#main-screen)
+* [The Basics](#the-basics)
+  * [Adding an Item](#adding-an-item)
+  * [Editing an Item](#editing-an-item)
+  * [Deleting an Item](#deleting-an-item)
+  * [Logging Out](#logging-out)
+* [Advanced Operations](#advanced-operations)
+  * [Searching for an Item](#searching-for-an-item)
+  * [Sorting Items](#sorting-items)
+
+
 # Getting Started
+
 ## Create an Account
 
 To get started, you must create an account.
@@ -31,6 +47,7 @@ On the Login Screen, type your Username and Pin into the corresponding text boxe
 
 
 # The Basics
+
 ## Adding an Item
 
 ![Main Screen](images/UI_MainScreen.png)
@@ -80,6 +97,7 @@ Click the Hamburger Menu icon ( ☰ ) and then select 'Logout' at the bottom of 
 
 
 # Advanced Operations
+
 ## Searching for an Item
 
 Click the Magnifying Glass icon ( 🔍 ) in the top right hand corner of the Main Screen.  The action bar will then become a search box in which to type what you want to search for.
