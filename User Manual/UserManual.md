@@ -42,7 +42,7 @@ On the Login Screen, type your Username and Pin into the corresponding text boxe
 * Clicking the Hamburger Menu icon ( ☰ ) will open the Side Menu.
 * Clicking the More Options icon ( ⋮ ) will open Additional Options.
 * Clicking the Magnifying Glass icon ( 🔍 ) will open the Search Bar.
-* Clicking the Add icon will open the Create Item Screen.
+* Clicking the Add icon ( + ) will open the Create Item Screen.
 * Clicking an item will open the Item Details Screen.
 
 
@@ -52,7 +52,7 @@ On the Login Screen, type your Username and Pin into the corresponding text boxe
 
 ![Main Screen](images/UI_MainScreen.png)
 
-Click the Add icon in the bottom right hand corner of the Main Screen.
+Click the Add icon ( + ) in the bottom right hand corner of the Main Screen.
 
 ![Item Edit Screen](images/UI_ItemEditScreen.png)
 
