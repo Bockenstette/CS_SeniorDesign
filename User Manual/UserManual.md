@@ -1,5 +1,5 @@
 # Getting Started
-### Create an Account
+## Create an Account
 
 To get started, you must create an account.
 
@@ -12,14 +12,14 @@ On the Login Screen, click the Create Button.  This will bring you to the Create
 When on the Create Account Screen, type your First Name, Last Name, Username, and Pin into the corresponding text boxes.  Once all accurate information is filled in, click the Create Button.
 
 
-### Logging In
+## Logging In
 
 ![Login Screen](images/UI_LoginScreen.png)
 
 On the Login Screen, type your Username and Pin into the corresponding text boxes.  Once the information is filled in, click the Login Button.  If the provided information is correct, this will bring you to the Main Screen.  If the provided information is incorrect, you will be notified and the inputs will be cleared.
 
 
-### Main Screen
+## Main Screen
 
 ![Main Screen](images/UI_MainScreen.png)
 
@@ -31,7 +31,7 @@ On the Login Screen, type your Username and Pin into the corresponding text boxe
 
 
 # The Basics
-### Adding an Item
+## Adding an Item
 
 ![Main Screen](images/UI_MainScreen.png)
 
@@ -42,7 +42,7 @@ Click the Add icon in the bottom right hand corner of the Main Screen.
 Fill out the item details.  When finished, click the Save Button.
 
 
-### Editing an Item
+## Editing an Item
 
 ![Main Screen](images/UI_MainScreen.png)
 
@@ -57,7 +57,7 @@ Click 'Edit' in the top right hand corner of the Item Details Screen.
 Edit the item details.  When finished, click the Save Button.
 
 
-### Deleting an Item
+## Deleting an Item
 
 ![Main Screen](images/UI_MainScreen.png)
 
@@ -72,7 +72,7 @@ Click 'Edit' in the top right hand corner of the Item Details Screen.
 Click 'Delete' in the top right hand corner of the Item Edit Screen.
 
 
-### Logging Out
+## Logging Out
 
 ![Hamburger Menu](images/UI_HamburgerMenu.png)
 
@@ -80,11 +80,11 @@ Click the Hamburger Menu icon ( ☰ ) and then select 'Logout' at the bottom of 
 
 
 # Advanced Operations
-### Searching for an Item
+## Searching for an Item
 
 Click the Magnifying Glass icon ( 🔍 ) in the top right hand corner of the Main Screen.  The action bar will then become a search box in which to type what you want to search for.
 
 
-### Sorting Items
+## Sorting Items
 
 Click the More Options icon ( ⋮ ) in the top right hand corner of the Main Screen.  Then, click 'Sort by...' and select which option to sort by.
