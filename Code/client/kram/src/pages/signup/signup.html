@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Signup
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="signup">
+  <form id="signup-form">
+    <ion-list id="signup-list-signup">
+      <ion-item id="signup-input-name">
+        <ion-label>
+          Name
+        </ion-label>
+        <ion-input type="text" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item id="signup-input-email">
+        <ion-label>
+          Email
+        </ion-label>
+        <ion-input type="email" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item id="signup-input-password">
+        <ion-label>
+          Password
+        </ion-label>
+        <ion-input type="text" placeholder=""></ion-input>
+      </ion-item>
+    </ion-list>
+    <button id="signup-button-signup" ion-button color="stable" block on-click="goToLogin()">
+      Sign up
+    </button>
+  </form>
+</ion-content>

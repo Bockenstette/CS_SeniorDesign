@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-buttons left>
+      <button (click)="openMenu()" ion-button icon-only>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      KRAM
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="kram">
+  <ion-list id="kram-list">
+    <ion-item id="kram-list-item1" (click)="goToItem()">
+      <ion-thumbnail item-left>
+        <img />
+      </ion-thumbnail>
+      <h2>
+        Item
+      </h2>
+    </ion-item>
+    <ion-item color="none" id="kram-list-item2">
+      <ion-thumbnail item-left>
+        <img />
+      </ion-thumbnail>
+      <h2>
+        Item
+      </h2>
+    </ion-item>
+    <ion-item color="none" id="kram-list-item3">
+      <ion-thumbnail item-left>
+        <img />
+      </ion-thumbnail>
+      <h2>
+        Item
+      </h2>
+    </ion-item>
+    <ion-item color="none" id="kram-list-item4">
+      <ion-thumbnail item-left>
+        <img />
+      </ion-thumbnail>
+      <h2>
+        Item
+      </h2>
+    </ion-item>
+    <ion-item color="none" id="kram-list-item5">
+      <ion-thumbnail item-left>
+        <img />
+      </ion-thumbnail>
+      <h2>
+        Item
+      </h2>
+    </ion-item>
+    <ion-item color="none" id="kram-list-item6">
+      <ion-thumbnail item-left>
+        <img />
+      </ion-thumbnail>
+      <h2>
+        Item
+      </h2>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab right bottom>
+      <button ion-fab (click)="goToItem()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>
