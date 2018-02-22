@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20160913-225446">
+  <project autorefresh="false" build="build/" main="src.kram.KRAM" root="" work="src/">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="src/kram/sql/MySQLConnectionManager.java" package="kram.sql" timestamp="22-Feb-2018 11:58:54">
+        <select from="972" to="972"/>
+        <scroll column="31" row="0"/>
+      </file>
+      <file name="src/kram/KRAM.java" package="kram" timestamp="22-Feb-2018 11:52:37">
+        <select from="972" to="972"/>
+        <scroll column="31" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath/>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>
