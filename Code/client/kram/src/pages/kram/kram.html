@@ -18,8 +18,9 @@
     </ion-buttons>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="kram">
-  <ion-list id="kram-list">
+<ion-content id="kram">
+  <ion-item-group id="kram-group1">
+    <ion-item-divider color="light-primary">A</ion-item-divider>
     <ion-item id="kram-list-item1" (click)="goToItem()">
       <ion-thumbnail item-left>
         <img />
@@ -68,10 +69,64 @@
         Item
       </h2>
     </ion-item>
-  </ion-list>
+  </ion-item-group>
+
+  <ion-item-group id="kram-group2">
+      <ion-item-divider color="light-primary">B</ion-item-divider>
+      <ion-item id="kram-list-item7" (click)="goToItem()">
+        <ion-thumbnail item-left>
+          <img />
+        </ion-thumbnail>
+        <h2>
+          Item
+        </h2>
+      </ion-item>
+      <ion-item color="none" id="kram-list-item8">
+        <ion-thumbnail item-left>
+          <img />
+        </ion-thumbnail>
+        <h2>
+          Item
+        </h2>
+      </ion-item>
+      <ion-item color="none" id="kram-list-item9">
+        <ion-thumbnail item-left>
+          <img />
+        </ion-thumbnail>
+        <h2>
+          Item
+        </h2>
+      </ion-item>
+      <ion-item color="none" id="kram-list-item10">
+        <ion-thumbnail item-left>
+          <img />
+        </ion-thumbnail>
+        <h2>
+          Item
+        </h2>
+      </ion-item>
+      <ion-item color="none" id="kram-list-item11">
+        <ion-thumbnail item-left>
+          <img />
+        </ion-thumbnail>
+        <h2>
+          Item
+        </h2>
+      </ion-item>
+      <ion-item color="none" id="kram-list-item12">
+        <ion-thumbnail item-left>
+          <img />
+        </ion-thumbnail>
+        <h2>
+          Item
+        </h2>
+      </ion-item>
+    </ion-item-group>
 
   <ion-fab right bottom>
-      <button ion-fab color="accent" (click)="goToItem()"><ion-icon name="add"></ion-icon></button>
+    <button ion-fab color="accent" (click)="goToItem()">
+      <ion-icon name="add"></ion-icon>
+    </button>
   </ion-fab>
 
 </ion-content>
