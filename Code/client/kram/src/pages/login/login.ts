@@ -19,7 +19,7 @@ export class LoginPage {
     if (!params) params = {};
     this.navCtrl.push(SignupPage);
   }
-  goToLogin(params){
+  public goToLogin(params){
     if (!params) params = {};
     this.navCtrl.push(LoginPage);
   }

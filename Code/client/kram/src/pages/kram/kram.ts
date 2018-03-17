@@ -7,6 +7,7 @@ import { ItemPage } from '../item/item';
   templateUrl: 'kram.html'
 })
 export class KramPage {
+  showSearchbar = false;
 
   constructor(app: App, public navCtrl: NavController, 
     public popoverCtrl: PopoverController, public menu: MenuController) {
@@ -19,5 +20,12 @@ export class KramPage {
   }
   openMenu() {
     this.menu.open();
+  }
+  toggleSearchbar() {
+    if (this.showSearchbar === false) {
+      this.showSearchbar = true;
+    } else {
+      this.showSearchbar = false;
+    }
   }
 }
