@@ -8,34 +8,34 @@
 <ion-content padding id="item">
   <form id="item-form">
     <ion-item id="item-input-name">
-      <ion-label>
+      <ion-label class="label">
         Name
       </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
+      <ion-input [readonly]="!getEditable()" color="secondary-text" type="text" placeholder="" value="{{item.Name}}"></ion-input>
     </ion-item>
     <ion-item id="item-input-quantity">
-      <ion-label>
+      <ion-label class="label">
         Quantity
       </ion-label>
-      <ion-input type="number" placeholder=""></ion-input>
+      <ion-input [readonly]="!getEditable()" color="secondary-text" type="number" placeholder="" value="{{item.Quantity}}"></ion-input>
     </ion-item>
     <ion-item id="item-input-price">
-      <ion-label>
+      <ion-label class="label">
         Price
       </ion-label>
-      <ion-input type="number" placeholder=""></ion-input>
+      <ion-input [readonly]="!getEditable()" color="secondary-text" type="number" placeholder="" value="${{item.Price}}"></ion-input>
     </ion-item>
     <ion-item id="item-input-location">
-      <ion-label>
+      <ion-label class="label">
         Location
       </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
+      <ion-input [readonly]="!getEditable()" color="secondary-text" type="text" placeholder="" value="{{item.Location}}"></ion-input>
     </ion-item>
     <ion-item id="item-textarea-notes">
-      <ion-label>
+      <ion-label class="label">
         Notes
       </ion-label>
-      <ion-textarea placeholder=""></ion-textarea>
+      <ion-textarea autoresize class="textarea" [readonly]="!getEditable()" color="secondary-text" placeholder="" value="{{item.Notes}}"></ion-textarea>
     </ion-item>
     <button id="item-button-save" ion-button color="accent" block on-click="goToKram()">
       Save

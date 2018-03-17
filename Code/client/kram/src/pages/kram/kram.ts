@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { App, MenuController, NavController, PopoverController } from 'ionic-angular';
 import { ItemPage } from '../item/item';
 
@@ -7,9 +7,6 @@ import { ItemPage } from '../item/item';
   templateUrl: 'kram.html'
 })
 export class KramPage {
-
-  @ViewChild('popoverContent', { read: ElementRef }) content: ElementRef;
-  @ViewChild('popoverText', { read: ElementRef }) text: ElementRef;
   showSearchbar = false;
 
   constructor(app: App, public navCtrl: NavController, 
@@ -18,8 +15,8 @@ export class KramPage {
   }
 
   goToItem(params) {
-    if (!params) params = {};
-    this.navCtrl.push(ItemPage);
+    if (!params) params = {editable: true};
+    this.navCtrl.push(ItemPage, params);
   }
   openMenu() {
     this.menu.open();
