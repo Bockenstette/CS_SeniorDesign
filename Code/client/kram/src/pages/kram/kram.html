@@ -20,7 +20,7 @@
 </ion-header>
 <ion-content padding id="kram">
   <ion-list id="kram-list">
-    <ion-item id="kram-list-item1" (click)="goToItem()">
+    <ion-item id="kram-list-item1" (click)="goToItem({editable: false})">
       <ion-thumbnail item-left>
         <img />
       </ion-thumbnail>
@@ -71,7 +71,7 @@
   </ion-list>
 
   <ion-fab right bottom>
-      <button ion-fab color="accent" (click)="goToItem()"><ion-icon name="add"></ion-icon></button>
+      <button ion-fab color="accent" (click)="goToItem({editable: true})"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 
 </ion-content>
