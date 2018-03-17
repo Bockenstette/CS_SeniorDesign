@@ -8,31 +8,31 @@
 <ion-content padding id="item">
   <form id="item-form">
     <ion-item id="item-input-name">
-      <ion-label class="label">
+      <ion-label class="item-label">
         Name
       </ion-label>
       <ion-input [readonly]="!getEditable()" color="secondary-text" type="text" placeholder="" value="{{item.Name}}"></ion-input>
     </ion-item>
     <ion-item id="item-input-quantity">
-      <ion-label class="label">
+      <ion-label class="item-label">
         Quantity
       </ion-label>
       <ion-input [readonly]="!getEditable()" color="secondary-text" type="number" placeholder="" value="{{item.Quantity}}"></ion-input>
     </ion-item>
     <ion-item id="item-input-price">
-      <ion-label class="label">
+      <ion-label class="item-label">
         Price
       </ion-label>
       <ion-input [readonly]="!getEditable()" color="secondary-text" type="number" placeholder="" value="${{item.Price}}"></ion-input>
     </ion-item>
     <ion-item id="item-input-location">
-      <ion-label class="label">
+      <ion-label class="item-label">
         Location
       </ion-label>
       <ion-input [readonly]="!getEditable()" color="secondary-text" type="text" placeholder="" value="{{item.Location}}"></ion-input>
     </ion-item>
     <ion-item id="item-textarea-notes">
-      <ion-label class="label">
+      <ion-label class="item-label">
         Notes
       </ion-label>
       <ion-textarea autoresize class="textarea" [readonly]="!getEditable()" color="secondary-text" placeholder="" value="{{item.Notes}}"></ion-textarea>
