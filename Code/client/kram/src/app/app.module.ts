@@ -6,6 +6,7 @@ import { KramPage } from '../pages/kram/kram';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { ItemPage } from '../pages/item/item';
+import { PopoverPage } from '../pages/kram/kram';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,7 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     KramPage,
     LoginPage,
     SignupPage,
-    ItemPage
+    ItemPage,
+    PopoverPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     KramPage,
     LoginPage,
     SignupPage,
-    ItemPage
+    ItemPage,
+    PopoverPage
   ],
   providers: [
     StatusBar,
