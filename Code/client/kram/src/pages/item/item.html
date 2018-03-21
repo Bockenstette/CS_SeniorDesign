@@ -3,6 +3,11 @@
     <ion-title>
       Item
     </ion-title>
+    <ion-buttons end>
+      <button *ngIf="!editable" color="text" (click)="setEditable(true)" ion-button icon-only>
+        Edit
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content padding id="item">
@@ -37,8 +42,13 @@
       </ion-label>
       <ion-textarea autoresize class="textarea" [readonly]="!getEditable()" color="secondary-text" placeholder="" value="{{item.Notes}}"></ion-textarea>
     </ion-item>
-    <button id="item-button-save" ion-button color="accent" block on-click="goToKram()">
+    <br>
+    <button *ngIf="editable" id="item-button-save" ion-button color="accent" block on-click="setEditable(false)">
       Save
+    </button>
+    <br>
+    <button *ngIf="editable" id="item-button-save" ion-button color="danger" block on-click="confirmDelete()">
+      Delete
     </button>
   </form>
 </ion-content>
