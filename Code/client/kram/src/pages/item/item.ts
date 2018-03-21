@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { KramPage } from '../kram/kram';
 
 @Component({
@@ -9,7 +9,7 @@ import { KramPage } from '../kram/kram';
 export class ItemPage {
   private editable: boolean;
   item = {};
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     this.editable = navParams.get("editable");
     this.item = {
       "Name": "Test Name",
@@ -28,5 +28,26 @@ export class ItemPage {
   }
   setEditable(val: boolean){
     this.editable = val;
+  }
+  confirmDelete() {
+    let confirm = this.alertCtrl.create({
+      title: 'DELETE',
+      message: 'Deleting an item is permanent. Are you sure you want to delete this item?',
+      buttons: [
+        {
+          text: 'No',
+          handler: () => {
+            console.log('No');
+          }
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+            console.log('Yes');
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 }
