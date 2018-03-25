@@ -1,12 +1,19 @@
 package com.kram.database;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.HashMap;
 
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.kram.ClassMap;
 import com.kram.database.connection.DatabaseConnectionManager;
 
+@Path( "/db/" )
 public class DatabaseManager
 {
 	private static DatabaseManager	instance			= null;
@@ -14,17 +21,15 @@ public class DatabaseManager
 	private Statement				currentStatement	= null;
 
 	private String			currentTable		= "";
-	private final String	defaultTableFormat	= "(ItemName VARCHAR(255) " +
-			"ID INTEGER not null " +
-			"Quantity INTEGER not null " +
-			"Price DECIMAL(8,2) not null " +
-			"Location VARCHAR(255) " +
-			"PRIMARY KEY ( ID )) ";
-	private String			notesTableFormat	= "(ID INTEGER not null " +
-			"Note VARCHAR(255) " +
-			"FOREIGN KEY ( ID ) REFERENCES " + currentTable + " ( ID ))";
+	private final String	defaultTableFormat	= "(ItemName VARCHAR(255), " +
+			"ID INTEGER NOT NULL AUTO_INCREMENT, " +
+			"Quantity INTEGER NOT NULL, " +
+			"Price DECIMAL(8,2) NOT NULL, " +
+			"Location VARCHAR(255), " +
+			"Notes VARCHAR(255), " +
+			"PRIMARY KEY ( ID ))";
 
-	private HashMap< String, Class< ? > > valueTypes = defaultMap();
+	private ClassMap valueTypes = createDefaultMap();
 
 	private DatabaseManager()
 	{
@@ -35,7 +40,7 @@ public class DatabaseManager
 		catch ( Exception e )
 		{
 			String error = "Cannot get connection to database";
-			System.console().printf( "%s\n\n%s\n%s", error, e.toString(), e.getStackTrace() );
+			System.out.printf( "%s\n\n%s\n%s", error, e.toString() );
 		}
 	}
 
@@ -54,9 +59,9 @@ public class DatabaseManager
 		}
 	}
 
-	private HashMap< String, Class< ? > > defaultMap()
+	private ClassMap createDefaultMap()
 	{
-		HashMap< String, Class< ? > > tempMap = new HashMap< String, Class< ? > >();
+		ClassMap tempMap = new ClassMap();
 		tempMap.put( "ID", int.class );
 		tempMap.put( "Quantity", int.class );
 		tempMap.put( "Price", double.class );
@@ -66,6 +71,7 @@ public class DatabaseManager
 		return tempMap;
 	}
 
+	@Path( "/init/" )
 	public static DatabaseManager getInstance()
 	{
 		if ( instance != null )
@@ -78,33 +84,32 @@ public class DatabaseManager
 		return instance;
 	}
 
+	// TODO: Execute SHOW TABLES query then cycle through looking for correct table,
+	// create if doesn't exist
 	public void setTable( String username )
 	{
 		currentTable = username;
 	}
 
+	@Path( "/createtable/" )
+	@POST
 	public void createTable( String username )
 	{
 		try
 		{
 			currentStatement = kramConnection.createStatement();
 
-			String sql = "CREATE TABLE " + username + " " + defaultTableFormat;
-			int result = currentStatement.executeUpdate( sql );
+			String sql = "CREATE TABLE " + username + defaultTableFormat;
+			currentStatement.executeUpdate( sql );
 
-			System.console().printf( "%s\t%i", "Create user table", result );
-
-			sql = "CREATE TABLE " + username + "_Notes " + notesTableFormat;
-			result = currentStatement.executeUpdate( sql );
-
-			System.console().printf( "%s\t%i", "Create notes table", result );
+			currentTable = username;
 
 			setTable( username );
 		}
 		catch ( Exception e )
 		{
 			String error = "Cannot create table";
-			System.console().printf( "%s\n\n%s\n%s", error, e.toString(), e.getStackTrace() );
+			System.out.printf( "%s\n\n%s\n", error, e.toString() );
 		}
 		finally
 		{
@@ -112,26 +117,34 @@ public class DatabaseManager
 		}
 	}
 
-	public < V > void addAttribute( String attribute, V value )
+	@Path( "/additem/" )
+	@POST
+	public < V > int addItem( String itemName, int quantity, double price, String location )
 	{
-		valueTypes.put( attribute, value.getClass() );
-
 		try
 		{
 			currentStatement = kramConnection.createStatement();
 
-			// String sql = "ALTER TABLE" + currentTable + " ADD " + attribute;
+			String sql = "INSERT INTO " + currentTable + " (ItemName, Quantity, Price, Location) VALUES (\'" + itemName
+					+ "\', " + quantity + ", " + price + ", \'" + location + "\')";
+
+			currentStatement.executeUpdate( sql );
 		}
 		catch ( Exception e )
 		{
-
+			String error = "Cannot add item " + itemName;
+			System.out.printf( "%s\n\n%s\n", error, e.toString() );
 		}
 		finally
 		{
 			closeStatement();
 		}
+		// TODO: Fix to be ID of just entered item
+		return 1;
 	}
 
+	@Path( "/updateitem/" )
+	@POST
 	public < V > void updateItem( int ID, String attribute, V value ) throws Exception
 	{
 		if ( !valueTypes.containsKey( attribute ) )
@@ -139,7 +152,7 @@ public class DatabaseManager
 			throw new IllegalArgumentException( attribute + " is not a valid attribute" );
 		}
 
-		if ( value.getClass() != valueTypes.get( attribute ) )
+		if ( value.getClass() != valueTypes.getType( attribute ) )
 		{
 			throw new IllegalArgumentException( "Type of passed value does not match stored type of " + attribute );
 		}
@@ -150,18 +163,246 @@ public class DatabaseManager
 
 			String sql = "UPDATE " + currentTable + " SET " + attribute + " = " + value + "WHERE ID = " + ID;
 
-			int result = currentStatement.executeUpdate( sql );
-
-			System.console().printf( "%s\t%i", "Update " + attribute, result );
+			currentStatement.executeUpdate( sql );
 		}
 		catch ( Exception e )
 		{
 			String error = "Cannot update item " + ID;
-			System.console().printf( "%s\n\n%s\n%s", error, e.toString(), e.getStackTrace() );
+			System.out.printf( "%s\n\n%s\n", error, e.toString() );
 		}
 		finally
 		{
 			closeStatement();
 		}
+	}
+
+	@Path( "/addAtt/" )
+	@POST
+	public < V > void addAttribute( String attribute, Class< ? > type )
+	{
+		valueTypes.put( attribute, type );
+
+		try
+		{
+			currentStatement = kramConnection.createStatement();
+
+			String sql = "ALTER TABLE " + currentTable + " ADD " + attribute + " " + valueTypes.getSqlType( attribute );
+
+			currentStatement.executeUpdate( sql );
+		}
+		catch ( Exception e )
+		{
+			String error = "Cannot add attribute " + attribute + " with type " + type;
+			System.out.printf( "%s\n\n%s\n", error, e.toString() );
+		}
+		finally
+		{
+			closeStatement();
+		}
+	}
+
+	@Path( "/sortbyname/" )
+	@POST
+	@Produces( MediaType.APPLICATION_JSON )
+	public String sortByName()
+	{
+		String json = "{";
+
+		try
+		{
+			currentStatement = kramConnection.createStatement();
+
+			String sql = "SELECT * FROM " + currentTable + " ORDER BY ItemName DESC";
+
+			ResultSet resultSet = currentStatement.executeQuery( sql );
+
+			while ( resultSet.next() )
+			{
+				json += "\"" + resultSet.getString( 1 ) + "\": {" +
+						"\"ID\":" + resultSet.getInt( 2 ) + "," +
+						"\"Quantity\":" + resultSet.getInt( 3 ) + "," +
+						"\"Price\":" + resultSet.getBigDecimal( 4 ) + "," +
+						"\"Location\":\"" + resultSet.getString( 5 ) + "\"," +
+						"\"Notes\":\"" + resultSet.getString( 6 ) + "\"" +
+						"},";
+			}
+
+			json = json.substring( 0, json.length() - 1 );
+			json += "}";
+		}
+		catch ( Exception e )
+		{
+
+		}
+		finally
+		{
+			closeStatement();
+		}
+
+		return json;
+	}
+
+	@Path( "/sortbyprice/" )
+	@POST
+	@Produces( MediaType.APPLICATION_JSON )
+	public String sortByPrice()
+	{
+		String json = "{";
+
+		try
+		{
+			currentStatement = kramConnection.createStatement();
+
+			String sql = "SELECT * FROM " + currentTable + " ORDER BY Price DESC";
+
+			ResultSet resultSet = currentStatement.executeQuery( sql );
+
+			while ( resultSet.next() )
+			{
+				json += "\"" + resultSet.getString( 1 ) + "\": {" +
+						"\"ID\":" + resultSet.getInt( 2 ) + "," +
+						"\"Quantity\":" + resultSet.getInt( 3 ) + "," +
+						"\"Price\":" + resultSet.getBigDecimal( 4 ) + "," +
+						"\"Location\":\"" + resultSet.getString( 5 ) + "\"," +
+						"\"Notes\":\"" + resultSet.getString( 6 ) + "\"" +
+						"},";
+			}
+
+			json = json.substring( 0, json.length() - 1 );
+			json += "}";
+		}
+		catch ( Exception e )
+		{
+
+		}
+		finally
+		{
+			closeStatement();
+		}
+
+		return json;
+	}
+
+	@Path( "/sortbylocation/" )
+	@POST
+	@Produces( MediaType.APPLICATION_JSON )
+	public String sortByLocation()
+	{
+		String json = "{";
+
+		try
+		{
+			currentStatement = kramConnection.createStatement();
+
+			String sql = "SELECT * FROM " + currentTable + " ORDER BY Location DESC";
+
+			ResultSet resultSet = currentStatement.executeQuery( sql );
+
+			while ( resultSet.next() )
+			{
+				json += "\"" + resultSet.getString( 1 ) + "\": {" +
+						"\"ID\":" + resultSet.getInt( 2 ) + "," +
+						"\"Quantity\":" + resultSet.getInt( 3 ) + "," +
+						"\"Price\":" + resultSet.getBigDecimal( 4 ) + "," +
+						"\"Location\":\"" + resultSet.getString( 5 ) + "\"," +
+						"\"Notes\":\"" + resultSet.getString( 6 ) + "\"" +
+						"},";
+			}
+
+			json = json.substring( 0, json.length() - 1 );
+			json += "}";
+		}
+		catch ( Exception e )
+		{
+
+		}
+		finally
+		{
+			closeStatement();
+		}
+
+		return json;
+	}
+
+	@Path( "/search/" )
+	@POST
+	@Produces( MediaType.APPLICATION_JSON )
+	public String search( String searchTerm )
+	{
+		String json = "{";
+		try
+		{
+			currentStatement = kramConnection.createStatement();
+
+			String sql = "SELECT * FROM " + currentTable + " WHERE CHARINDEX(\'" + searchTerm + "\', ItemName) > 0";
+
+			ResultSet resultSet = currentStatement.executeQuery( sql );
+
+			json += "\"" + searchTerm + "\": {";
+			while ( resultSet.next() )
+			{
+				json += "\"" + resultSet.getString( 1 ) + "\": {" +
+						"\"ID\":" + resultSet.getInt( 2 ) + "," +
+						"\"Quantity\":" + resultSet.getInt( 3 ) + "," +
+						"\"Price\":" + resultSet.getBigDecimal( 4 ) + "," +
+						"\"Location\":\"" + resultSet.getString( 5 ) + "\"," +
+						"\"Notes\":\"" + resultSet.getString( 6 ) + "\"" +
+						"},";
+			}
+
+			json = json.substring( 0, json.length() - 1 );
+			json += "}";
+		}
+		catch ( Exception e )
+		{
+
+		}
+		finally
+		{
+			closeStatement();
+		}
+
+		return json += "}";
+	}
+
+	@Path( "/getbyid/" )
+	@POST
+	@Produces( MediaType.APPLICATION_JSON )
+	public String getByID( int ID )
+	{
+		String json = "{";
+
+		try
+		{
+			currentStatement = kramConnection.createStatement();
+
+			String sql = "SELECT * FROM " + currentTable + " WHERE ID = " + ID;
+
+			ResultSet resultSet = currentStatement.executeQuery( sql );
+
+			while ( resultSet.next() )
+			{
+				json += "\"" + resultSet.getString( 1 ) + "\": {" +
+						"\"ID\":" + resultSet.getInt( 2 ) + "," +
+						"\"Quantity\":" + resultSet.getInt( 3 ) + "," +
+						"\"Price\":" + resultSet.getBigDecimal( 4 ) + "," +
+						"\"Location\":\"" + resultSet.getString( 5 ) + "\"," +
+						"\"Notes\":\"" + resultSet.getString( 6 ) + "\"" +
+						"},";
+			}
+
+			json = json.substring( 0, json.length() - 1 );
+			json += "}";
+		}
+		catch ( Exception e )
+		{
+
+		}
+		finally
+		{
+			closeStatement();
+		}
+
+		return json;
 	}
 }

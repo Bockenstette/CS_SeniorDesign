@@ -27,7 +27,7 @@ public class ClassMap extends HashMap< String, Object >
 			this.type = type;
 			switch ( type.getName() )
 			{
-			case "String":
+			case "java.lang.String":
 				sqlType = "VARCHAR( 255 )";
 				break;
 			case "int":
@@ -52,7 +52,7 @@ public class ClassMap extends HashMap< String, Object >
 
 	public void put( String key, Class< ? > value )
 	{
-		classMap.put( key, new Value( value.getClass() ) );
+		classMap.put( key, new Value( value ) );
 	}
 
 	public Class< ? > getType( String key )

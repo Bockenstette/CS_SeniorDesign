@@ -9,9 +9,9 @@ public class DatabaseConnectionManager
 	private static MysqlDataSource	kram		= null;
 	private static Connection		connection	= null;
 
-	private static final String		USERNAME	= "kram";
-	private static final String		PASSWORD	= "Hx0bVSmb!?XX";
-	private static final String		URL			= "den1.mysql3.gear.host";
+	private static final String	USERNAME	= "kram";
+	private static final String	PASSWORD	= "Hx0bVSmb!?XX";
+	private static final String	URL			= "den1.mysql3.gear.host";
 
 	private static void setup() throws Exception
 	{
