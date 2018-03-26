@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -30,6 +31,13 @@ public class DatabaseManager
 			"PRIMARY KEY ( ID ))";
 
 	private ClassMap valueTypes = createDefaultMap();
+
+	@GET
+	@Produces( MediaType.TEXT_HTML )
+	public String ret()
+	{
+		return "<p>Web Service</p>";
+	}
 
 	private DatabaseManager()
 	{
