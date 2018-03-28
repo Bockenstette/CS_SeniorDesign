@@ -9,12 +9,13 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
   <servlet>
     <servlet-name>Jersey REST Service</servlet-name>
-    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
     <init-param>
-      <param-name>jersey.config.server.provider.packages</param-name>
-      <param-value>kram</param-value>
+      <param-name>com.sun.jersey.config.property.packages</param-name>
+      <param-value>com.kram</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
