@@ -1,4 +1,0 @@
-#Mon Feb 12 23:04:03 EST 2018
-base.0=/Users/ryanpavsek/Documents/GitHub/CS_SeniorDesign/Frontend/kram/platforms/android/app/build/intermediates/transforms/dex/release/0
-renamed.0=classes.dex
-file.0=/Users/ryanpavsek/Documents/GitHub/CS_SeniorDesign/Frontend/kram/platforms/android/app/build/intermediates/transforms/dex/release/0/classes.dex
