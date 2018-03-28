@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { App, MenuController, NavController, PopoverController, ViewController, AlertController } from 'ionic-angular';
+import { App, MenuController, NavController, PopoverController, ViewController, AlertController, NavParams } from 'ionic-angular';
 import { ItemPage } from '../item/item';
 
 @Component({
@@ -11,10 +11,18 @@ import { ItemPage } from '../item/item';
   `
 })
 export class PopoverPage {
-  constructor(public viewCtrl: ViewController, public alertCtrl: AlertController) {}
+  sortBy: string;
+
+  constructor(public viewCtrl: ViewController, public alertCtrl: AlertController, public navParms: NavParams) {}
+
+  ngOnInit() {
+    if (this.navParms.data) {
+      this.sortBy = this.navParms.data.sortBy;
+    }
+  }
 
   close() {
-    this.viewCtrl.dismiss();
+    this.viewCtrl.dismiss(this.sortBy);
   }
   showRadio() {
     let alert = this.alertCtrl.create();
@@ -24,27 +32,32 @@ export class PopoverPage {
       type: 'radio',
       label: 'Alphabetical',
       value: 'alphabetical',
-      checked: true
+      checked: this.sortBy == 'alphabetical'
     });
 
     alert.addInput({
       type: 'radio',
       label: 'Location',
-      value: 'location'
+      value: 'location',
+      checked: this.sortBy == 'location'
     });
 
     alert.addInput({
       type: 'radio',
       label: 'Price',
-      value: 'price'
+      value: 'price',
+      checked: this.sortBy == 'price'
     });
 
     alert.addButton('Cancel');
     alert.addButton({
-      text: 'OK'
+      text: 'OK',
+      handler: data => {
+        this.sortBy = data;
+        this.close();
+      }
     });
 
-    this.close();
     alert.present();
   }
 }
@@ -55,6 +68,7 @@ export class PopoverPage {
 })
 export class KramPage {
   showSearchbar = false;
+  sortBy = 'alphabetical';
 
   constructor(app: App, public navCtrl: NavController, 
     public popoverCtrl: PopoverController, public menu: MenuController) {
@@ -76,9 +90,14 @@ export class KramPage {
     }
   }
   presentPopover(myEvent) {
-    let popover = this.popoverCtrl.create(PopoverPage);
+    let popover = this.popoverCtrl.create(PopoverPage, {
+      sortBy: this.sortBy
+    });
     popover.present({
       ev: myEvent
     });
+    popover.onDidDismiss(data => {
+      this.sortBy = data;
+    })
   }
 }
