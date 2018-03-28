@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar hideBackButton color="primary">
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="login">
+  <div text-center>
+      <ion-img style="width: 150px; height: 150px; alt: kram; background: transparent; margin: auto" src="assets/imgs/KRAM_Logo.png"></ion-img>
+  </div>
+  <form id="login-form">
+    <ion-list id="login-list-login">
+      <ion-item id="login-input-email">
+        <ion-label>
+          Email
+        </ion-label>
+        <ion-input type="email" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item id="login-input-password">
+        <ion-label>
+          Password
+        </ion-label>
+        <ion-input type="password" placeholder=""></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="spacer" style="height:40px;" id="login-spacer"></div>
+    <button id="login-button-login" ion-button color="accent" block on-click="goToKram()">
+      Log in
+    </button>
+    <button id="login-button-create" ion-button clear color="primary-text" block on-click="goToSignup()">
+      Or create an account
+    </button>
+  </form>
+</ion-content>

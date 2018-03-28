@@ -1,0 +1,8 @@
+{
+  "name": "kram",
+  "app_id": "a947e848",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
