@@ -242,6 +242,8 @@ public class DatabaseManager
 	{
 		String json = "{";
 
+		char currentLetter = 'A';
+
 		try
 		{
 			currentStatement = kramConnection.createStatement();
@@ -252,7 +254,19 @@ public class DatabaseManager
 
 			while ( resultSet.next() )
 			{
-				json += "\"" + resultSet.getString( 1 ) + "\": {" +
+				String itemName = resultSet.getString( 1 );
+
+				if ( itemName.charAt( 0 ) != currentLetter )
+				{
+					if ( currentLetter != 'A' )
+					{
+						json += "}";
+					}
+
+					json += "{";
+				}
+
+				json += "\"" + itemName + "\": {" +
 						"\"ID\":" + resultSet.getInt( 2 ) + "," +
 						"\"Quantity\":" + resultSet.getInt( 3 ) + "," +
 						"\"Price\":" + resultSet.getBigDecimal( 4 ) + "," +
@@ -262,7 +276,7 @@ public class DatabaseManager
 			}
 
 			json = json.substring( 0, json.length() - 1 );
-			json += "}";
+			json += "}}";
 		}
 		catch ( Exception e )
 		{
@@ -427,4 +441,5 @@ public class DatabaseManager
 
 		return json;
 	}
+
 }
