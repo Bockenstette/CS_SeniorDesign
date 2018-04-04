@@ -23,6 +23,7 @@ To get started, you must create an account.
 
 On the login screen, click 'Create an Account.'  This will bring you to the account creation screen.
 
+
 ![Create Account Screen](images/CreateLoginScreen.png)
 
 When on the account creation screen, type your name, email, and password into the corresponding text boxes.  Once all accurate information is filled in, click the 'Sign Up' button.
@@ -54,7 +55,8 @@ On the login screen, type your email and password into the corresponding text bo
 
 Click the add icon ( + ) in the bottom right hand corner of the main screen.
 
-![Item Edit Screen](images/ItemEditScreen.png)
+
+![Add Item Screen](images/AddItemScreen.png)
 
 Fill out the item details.  When finished, click the 'Create' button.
 
@@ -65,9 +67,11 @@ Fill out the item details.  When finished, click the 'Create' button.
 
 Click on an item on the main screen.
 
+
 ![Item Details Screen](images/ItemDetailScreen.png)
 
 Click 'Edit' in the top right hand corner of the item details screen.
+
 
 ![Item Edit Screen](images/ItemEditScreen.png)
 
@@ -80,13 +84,16 @@ Edit the item details.  When finished, click the 'Save' button.
 
 Click on an item on the main screen.
 
+
 ![Item Details Screen](images/ItemDetailScreen.png)
 
 Click 'Edit' in the top right hand corner of the item details screen.
 
+
 ![Item Edit Screen](images/ItemEditScreen.png)
 
 Click the 'Delete' button at the bottom of the item edit screen.
+
 
 ![Item Delete Prompt](images/ItemDeletePrompt.png)
 
@@ -108,9 +115,11 @@ Click the hamburger menu icon ( ☰ ) and then select the 'Logout' button at the
 
 Click the magnifying glass icon ( 🔍 ) in the top right hand corner of the main screen.  The action bar will then become a searchbox in which to type what you want to search for.
 
+
 ![Main Screen with Search](images/SearchScreen.png)
 
 Type what you want to search for and click 'Search.'
+
 
 ![Search Results](images/SearchResultsScreen.png)
 
@@ -123,9 +132,11 @@ The results of your search are displayed.  Click 'Cancel' when you are finished.
 
 Click the more options icon ( ⋮ ) in the top right hand corner of the main screen.
 
+
 ![Popover Menu](images/PopoverMenuScreen.png)
 
 Then, click 'Sort by...'.
+
 
 ![Sort By](images/SortByScreen.png)
 
