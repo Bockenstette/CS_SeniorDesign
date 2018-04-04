@@ -42,7 +42,7 @@ On the login screen, type your email and password into the corresponding text bo
 * Clicking the hamburger menu icon ( ☰ ) will open the side menu.
 * Clicking the more options icon ( ⋮ ) will open additional options.
 * Clicking the magnifying glass icon ( 🔍 ) will open the searchbar.
-* Clicking the dd icon ( + ) will open the item creation screen.
+* Clicking the add icon ( + ) will open the item creation screen.
 * Clicking an item will open the item details screen.
 
 
