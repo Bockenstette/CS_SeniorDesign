@@ -19,100 +19,131 @@
 
 To get started, you must create an account.
 
-![Login Screen](images/UI_LoginScreen.png)
+![Login Screen](images/LoginScreen.png)
 
-On the Login Screen, click the Create Button.  This will bring you to the Create Account Screen.
+On the login screen, click 'Create an Account.'  This will bring you to the account creation screen.
 
-![Create Account Screen](images/UI_CreateLoginScreen.png)
 
-When on the Create Account Screen, type your First Name, Last Name, Username, and Pin into the corresponding text boxes.  Once all accurate information is filled in, click the Create Button.
+![Create Account Screen](images/CreateLoginScreen.png)
+
+When on the account creation screen, type your name, email, and password into the corresponding text boxes.  Once all accurate information is filled in, click the 'Sign Up' button.
 
 
 ## Logging In
 
-![Login Screen](images/UI_LoginScreen.png)
+![Login Screen](images/LoginScreen.png)
 
-On the Login Screen, type your Username and Pin into the corresponding text boxes.  Once the information is filled in, click the Login Button.  If the provided information is correct, this will bring you to the Main Screen.  If the provided information is incorrect, you will be notified and the inputs will be cleared.
+On the login screen, type your email and password into the corresponding text boxes.  Once the information is filled in, click the 'Log In' button.  If the provided information is correct, this will bring you to the main screen.  If the provided information is incorrect, you will receive an error message.
 
 
 ## Main Screen
 
-![Main Screen](images/UI_MainScreen.png)
+![Main Screen](images/KramScreen.png)
 
-* Clicking the Hamburger Menu icon ( ☰ ) will open the Side Menu.
-* Clicking the More Options icon ( ⋮ ) will open Additional Options.
-* Clicking the Magnifying Glass icon ( 🔍 ) will open the Search Bar.
-* Clicking the Add icon ( + ) will open the Create Item Screen.
-* Clicking an item will open the Item Details Screen.
+* Clicking the hamburger menu icon ( ☰ ) will open the side menu.
+* Clicking the more options icon ( ⋮ ) will open additional options.
+* Clicking the magnifying glass icon ( 🔍 ) will open the searchbar.
+* Clicking the add icon ( + ) will open the item creation screen.
+* Clicking an item will open the item details screen.
 
 
 # The Basics
 
 ## Adding an Item
 
-![Main Screen](images/UI_MainScreen.png)
+![Main Screen](images/KramScreen.png)
 
-Click the Add icon ( + ) in the bottom right hand corner of the Main Screen.
+Click the add icon ( + ) in the bottom right hand corner of the main screen.
 
-![Item Edit Screen](images/UI_ItemEditScreen.png)
 
-Fill out the item details.  When finished, click the Save Button.
+![Add Item Screen](images/AddItemScreen.png)
+
+Fill out the item details.  When finished, click the 'Create' button.
 
 
 ## Editing an Item
 
-![Main Screen](images/UI_MainScreen.png)
+![Main Screen](images/KramScreen.png)
 
-Click on an item on the Main Screen.
+Click on an item on the main screen.
 
-![Item Details Screen](images/UI_ItemDetailScreen.png)
 
-Click 'Edit' in the top right hand corner of the Item Details Screen.
+![Item Details Screen](images/ItemDetailScreen.png)
 
-![Item Edit Screen](images/UI_ItemEditScreen.png)
+Click 'Edit' in the top right hand corner of the item details screen.
 
-Edit the item details.  When finished, click the Save Button.
+
+![Item Edit Screen](images/ItemEditScreen.png)
+
+Edit the item details.  When finished, click the 'Save' button.
 
 
 ## Deleting an Item
 
-![Main Screen](images/UI_MainScreen.png)
+![Main Screen](images/KramScreen.png)
 
-Click on an item on the Main Screen.
+Click on an item on the main screen.
 
-![Item Details Screen](images/UI_ItemDetailScreen.png)
 
-Click 'Edit' in the top right hand corner of the Item Details Screen.
+![Item Details Screen](images/ItemDetailScreen.png)
 
-![Item Edit Screen](images/UI_ItemEditScreen.png)
+Click 'Edit' in the top right hand corner of the item details screen.
 
-Click 'Delete' in the top right hand corner of the Item Edit Screen.
+
+![Item Edit Screen](images/ItemEditScreen.png)
+
+Click the 'Delete' button at the bottom of the item edit screen.
+
+
+![Item Delete Prompt](images/ItemDeletePrompt.png)
+
+When prompted, click 'Yes' to confirm deletion of the item.
 
 
 ## Logging Out
 
-![Hamburger Menu](images/UI_HamburgerMenu.png)
+![Hamburger Menu](images/HamburgerMenuScreen.png)
 
-Click the Hamburger Menu icon ( ☰ ) and then select 'Logout' at the bottom of the menu.
+Click the hamburger menu icon ( ☰ ) and then select the 'Logout' button at the bottom of the menu.
 
 
 # Advanced Operations
 
 ## Searching for an Item
 
-![Main Screen](images/UI_MainScreen.png)
+![Main Screen](images/KramScreen.png)
 
-Click the Magnifying Glass icon ( 🔍 ) in the top right hand corner of the Main Screen.  The action bar will then become a search box in which to type what you want to search for.
+Click the magnifying glass icon ( 🔍 ) in the top right hand corner of the main screen.  The action bar will then become a searchbox in which to type what you want to search for.
+
+
+![Main Screen with Search](images/SearchScreen.png)
+
+Type what you want to search for and click 'Search.'
+
+
+![Search Results](images/SearchResultsScreen.png)
+
+The results of your search are displayed.  Click 'Cancel' when you are finished.
 
 
 ## Sorting Items
 
-![Main Screen](images/UI_MainScreen.png)
+![Main Screen](images/KramScreen.png)
 
-Click the More Options icon ( ⋮ ) in the top right hand corner of the Main Screen.  Then, click 'Sort by...' and select which option to sort by.
+Click the more options icon ( ⋮ ) in the top right hand corner of the main screen.
+
+
+![Popover Menu](images/PopoverMenuScreen.png)
+
+Then, click 'Sort by...'.
+
+
+![Sort By](images/SortByScreen.png)
+
+Finally, select which option to sort by and click 'OK.'
 
 
 <br/>
 <br/>
 
-*As of 02/01/2018.  The user interface is subject to change and the manual will be updated accordingly.*
+*As of 04/03/2018.  The user interface is subject to change and the manual will be updated accordingly.*

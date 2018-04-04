@@ -12,11 +12,11 @@ export class ItemPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     this.editable = navParams.get("editable");
     this.item = {
-      "Name": "Test Name",
+      "Name": "Nintendo Switch",
       "Quantity": 1,
-      "Price": 100.00,
-      "Location": "Room",
-      "Notes": "These are notes. These are notes. These are notes. These are notes. These are notes. These are notes. These are notes. These are notes. These are notes. These are notes. These are notes. These are notes. These are notes. These are notes. These are notes. These are notes. "
+      "Price": 299.99,
+      "Location": "Bedroom",
+      "Notes": "Birthday present from mom and dad"
     };
   }
   goToKram(params){
